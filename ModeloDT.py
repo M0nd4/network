@@ -22,7 +22,7 @@ print time.strftime("%d/%b - %H:%M:%S")
 
 #LibDinamicaC = ct.WinDLL("\DinamicaaaCDLL.dll")
 #LibDinamicaC = ct.cdll.LoadLibrary('./Funciones/DinamicaaaCDLL/bin/Release/DinamicaaaCDLL.dll')
-LibDinamica = ct.CDLL('./Funciones/DinamicaC/LibDin/libDinamica.so')
+LibDinamica = ct.CDLL('./libnetwork.so')
 Dinamica = LibDinamica.Dinamica
 Dinamica.argtypes = [ct.c_float, ct.c_float, ct.c_float, ct.c_float, ct.c_float, ct.c_int, ct.c_int, ct.c_float, ct.c_float]
 Dinamica.restype = ct.POINTER(ct.c_float)
